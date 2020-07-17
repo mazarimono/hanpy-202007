@@ -1,0 +1,1 @@
+web gunicorn pos_app2:server 

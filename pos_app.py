@@ -1,3 +1,5 @@
+import os 
+
 import dash   
 import dash_core_components as dcc 
 import dash_html_components as html 
@@ -16,6 +18,7 @@ df = read_posdata('data/pos_data_0706.csv')
 
 app = dash.Dash(__name__)
 app.config.suppress_callback_exceptions = True
+server = app.server 
 
 app.layout = html.Div([
     
@@ -102,4 +105,4 @@ def update_graph(selected_one, selected_two, selected_three, selected_four, radi
 
 if __name__ == "__main__":
     app.run_server(debug=True)
-    
+
